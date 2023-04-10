@@ -1,0 +1,117 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+.parent {
+	/* background-color: #3a3845; */
+	width: 100vw;
+	height: 100vh;
+    position: relative;
+}
+
+.child {
+	background-color: rgba(241, 243, 244, 0.781);
+    border-radius: 10px;
+    box-shadow: 12px 16px 8px 2px #e5e5e5;
+	width: 50rem;
+	height: 35rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h1{
+    font-size: 3rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+h2{
+    margin-bottom: 2rem;
+}
+.child h1, h2{
+    text-align: center;
+}
+.print{
+    display: flex;
+    justify-content: space-around;
+    /* z-index: 20; */
+}
+.print_temperature{
+    /* width: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 300px; */
+    /* background-color: aqua; */
+}
+.print_humidity{
+    /* width: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* height: 300px; */
+    /* background-color: lavenderblush; */
+}
+
+.c-progress{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background:conic-gradient(#4070f4 3.6deg, #ededed 0deg); */
+    background:conic-gradient(red 3.6deg, #ededed 0deg);
+    border-radius:50%;
+    position: relative;
+  }
+ 
+  .c-progress:before{
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius:50%;
+    background-color: #fff;
+  }
+  .v-progress{
+    position: relative;
+    font-size: 3rem;
+    color: #4070f4;
+    /* color: red; */
+    font-weight: bold;
+  }
+  .vt-temperature{
+    color: rgb(243, 66, 66);
+  }
+
+
+@media only screen and (max-width: 400px) {
+    .parent {
+        /* background-color: lightgreen; */
+    }
+    .child {
+        /* background-color: #f7ccac; */
+        width: 90vw;
+        height: 65vh;
+    }
+    .print{
+        display: flex;
+        flex-direction: column;
+        /* z-index: 20; */
+    }
+    .print_temperature{
+        margin-top: 2rem;
+        margin-bottom: 2.5rem;
+    }
+    .print_humidity, .print_temperature{
+        flex-direction: row-reverse;
+        column-gap: 30px;
+        justify-content: space-around;
+
+    }
+  }
